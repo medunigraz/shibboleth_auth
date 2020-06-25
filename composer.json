@@ -2,7 +2,7 @@
   "name": "medunigraz/shibboleth-auth",
   "type": "typo3-cms-extension",
   "description": "Shibboleth Authentication for TYPO3 CMS",
-  "homepage": "https://github.com/visol/shibboleth_auth",
+  "homepage": "https://github.com/medunigraz/shibboleth_auth",
   "license": [
     "GPL-2.0-or-later"
   ],
