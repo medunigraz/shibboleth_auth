@@ -1,6 +1,6 @@
 <?php
 
-namespace Visol\ShibbolethAuth\LoginProvider;
+namespace MUG\ShibbolethAuth\LoginProvider;
 
 /*
  * This file is part of the TYPO3 CMS project.

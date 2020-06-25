@@ -1,6 +1,6 @@
 <?php
 
-namespace Visol\ShibbolethAuth\Hook;
+namespace MUG\ShibbolethAuth\Hook;
 
 use TYPO3\CMS\Core\Utility\StringUtility;
 
