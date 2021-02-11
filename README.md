@@ -56,6 +56,4 @@ You can customize the login screen by copying `Resources/Private/Templates/Backe
 
 Support
 -------
-If you need support setting up your TYPO3 instance with Shibboleth, you can contact us:
-
-visol digitale Dienstleistungen GmbH, www.visol.ch
+This is a fork of [visol/shibboleth_auth)](https://github.com/visol/shibboleth_auth) and is provided without support.
