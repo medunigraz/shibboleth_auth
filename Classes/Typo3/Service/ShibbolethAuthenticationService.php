@@ -16,6 +16,7 @@ namespace MUG\ShibbolethAuth\Typo3\Service;
  */
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Controller\ErrorPageController;
 
 class ShibbolethAuthenticationService extends \TYPO3\CMS\Sv\AbstractAuthenticationService
 {
@@ -154,16 +155,11 @@ class ShibbolethAuthenticationService extends \TYPO3\CMS\Sv\AbstractAuthenticati
                     $_procObj->onlyShibbolethFunc($this->remoteUser);
                 }
             } else {
-                /** @var $messageObj \TYPO3\CMS\Core\Messaging\ErrorpageMessage */
-                $messageObj = GeneralUtility::makeInstance(
-                    'TYPO3\CMS\Core\Messaging\ErrorpageMessage',
+                $errorController = GeneralUtility::makeInstance(ErrorPageController::class);
+                echo $errorController->errorAction(
+                    'Login error',
                     '<p>User (' . $this->remoteUser . ') not found!</p><p><a href="' . $this->extConf['logoutHandler'] . '">Shibboleth Logout</a></p>',
-                    'Login error'
                 );
-                $messageObj->output();
-            }
-            foreach ($_COOKIE as $key => $val) {
-                unset($_COOKIE[$key]);
             }
             exit;
         }
